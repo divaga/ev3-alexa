@@ -3,7 +3,11 @@
 ## Services Used
 
 AWS Iot Core
+
 Amazon API Gateway
+
 AWS Lambda
+
+
 
 Alexa Voice Service
