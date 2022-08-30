@@ -1,0 +1,152 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "robot challenge",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "MoveRobotIntent",
+          "slots": [
+            {
+              "name": "direction",
+              "type": "direction",
+              "samples": [
+                "go {direction}",
+                "move {direction}",
+                "{direction}"
+              ]
+            },
+            {
+              "name": "duration",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{duration} seconds",
+                "{duration} second",
+                "{duration} "
+              ]
+            }
+          ],
+          "samples": [
+            "move {direction} for {duration} please",
+            "please move {direction} for {duration} second",
+            "turn {direction} {duration} second",
+            "move {direction} {duration} second",
+            "go {direction}",
+            "going {direction}",
+            "move {direction}",
+            "turn {direction}",
+            "turn {direction} for {duration} second",
+            "going {direction} for {duration} second",
+            "go {direction} for {duration} second",
+            "move {direction} for {duration} second"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "left"
+              }
+            },
+            {
+              "name": {
+                "value": "right"
+              }
+            },
+            {
+              "name": {
+                "value": "backward"
+              }
+            },
+            {
+              "name": {
+                "value": "forward"
+              }
+            }
+          ],
+          "name": "direction"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "MoveRobotIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "direction",
+              "type": "direction",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.64686317853.174568418019"
+              }
+            },
+            {
+              "name": "duration",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.64686317853.1257630636785"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.64686317853.174568418019",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "moving to which direction?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Please specify direction"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.64686317853.1257630636785",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "how long do you want the robot to move?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Please specify duration in second"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "8"
+}

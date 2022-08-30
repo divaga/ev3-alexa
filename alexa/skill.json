@@ -1,0 +1,74 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "Move EV3 robot using voice command",
+          "examplePhrases": [
+            "Alexa, open robot challenge",
+            "Open robot challenge",
+            "robot challenge"
+          ],
+          "keywords": [
+            "aws",
+            "lego",
+            "ev3"
+          ],
+          "name": "EV3 With AWS",
+          "description": "Move EV3 robot using voice command",
+          "smallIconUri": "file://assets/images/en-US_smallIconUri.png",
+          "largeIconUri": "file://assets/images/en-US_largeIconUri.png"
+        }
+      },
+      "automaticDistribution": {
+        "isActive": false
+      },
+      "isAvailableWorldwide": false,
+      "testingInstructions": "Sample Test Instruction",
+      "category": "EDUCATION_AND_REFERENCE",
+      "distributionMode": "PRIVATE",
+      "distributionCountries": [
+        "US"
+      ]
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:695423772098:function:f1a3ecef-f168-4986-a0a9-3ec216fb08bb:Release_0"
+        },
+        "interfaces": [],
+        "regions": {
+          "EU": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:eu-west-1:695423772098:function:f1a3ecef-f168-4986-a0a9-3ec216fb08bb:Release_0"
+            }
+          },
+          "NA": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-east-1:695423772098:function:f1a3ecef-f168-4986-a0a9-3ec216fb08bb:Release_0"
+            }
+          },
+          "FE": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-west-2:695423772098:function:f1a3ecef-f168-4986-a0a9-3ec216fb08bb:Release_0"
+            }
+          }
+        }
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "locales": {
+        "en-US": {}
+      },
+      "containsAds": false,
+      "isExportCompliant": true,
+      "isChildDirected": false,
+      "shoppingKit": {
+        "isShoppingActionsEnabled": false
+      },
+      "usesPersonalInfo": false
+    }
+  }
+}
